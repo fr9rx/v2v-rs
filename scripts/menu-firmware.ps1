@@ -31,9 +31,12 @@ $board = $boards[[int]$boardChoice - 1].Value
 
 $port = Read-Host "Serial port (optional, press Enter to skip)"
 
-$args = @("-File", (Join-Path $PSScriptRoot "run-firmware.ps1"), "-Project", $project, "-Board", $board)
+$args = @{
+    Project = $project
+    Board   = $board
+}
 if (-not [string]::IsNullOrWhiteSpace($port)) {
-    $args += @("-Port", $port)
+    $args.Port = $port
 }
 
 & (Join-Path $PSScriptRoot "run-firmware.ps1") @args

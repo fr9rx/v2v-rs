@@ -22,7 +22,10 @@ function Get-Target([string]$board) {
 }
 
 $root = Split-Path -Parent $PSScriptRoot
-$repo = Join-Path $root $Project
+$repo = switch ($Project) {
+    "gateway" { Join-Path $root "v2v_gateway" }
+    "transceiver" { Join-Path $root "v2v_transceiver" }
+}
 $target = Get-Target $Board
 $cargoArgs = @("run", "--release", "--no-default-features", "--features", $Board, "--target", $target)
 
