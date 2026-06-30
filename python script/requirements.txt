@@ -1,0 +1,5 @@
+aiohttp
+cbor2
+pyserial
+pyserial-asyncio
+asyncio
