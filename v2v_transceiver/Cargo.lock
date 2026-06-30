@@ -2020,7 +2020,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "v2v_system"
+name = "v2v_transceiver"
 version = "0.1.0"
 dependencies = [
  "embassy-executor",

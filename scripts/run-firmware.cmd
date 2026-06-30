@@ -24,5 +24,5 @@ popd
 exit /b %CODE%
 
 :usage
-echo Usage: run-firmware.cmd system^|sniffer esp32^|esp32s2^|esp32s3^|esp32c3^|esp32c5^|esp32c6
+echo Usage: run-firmware.cmd gateway^|transceiver esp32^|esp32s2^|esp32s3^|esp32c3^|esp32c5^|esp32c6
 exit /b 1

@@ -1,6 +1,6 @@
 $projects = @(
-    @{ Name = "Vehicle firmware"; Value = "system" },
-    @{ Name = "Sniffer firmware"; Value = "sniffer" }
+    @{ Name = "Gateway firmware"; Value = "gateway" },
+    @{ Name = "Transceiver firmware"; Value = "transceiver" }
 )
 
 $boards = @(

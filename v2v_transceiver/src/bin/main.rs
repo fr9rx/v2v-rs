@@ -20,7 +20,7 @@ use esp_radio::{
 };
 use postcard::experimental::max_size::MaxSize;
 use postcard::{from_bytes, to_vec};
-use v2v_system::message::{Message, PositionMessage};
+use v2v_transceiver::message::{Message, PositionMessage};
 
 static PACKET_RECEIVED: Channel<CriticalSectionRawMutex, Message, 8> = Channel::new();
 static PACKET_TO_SEND: Channel<CriticalSectionRawMutex, Message, 8> = Channel::new();

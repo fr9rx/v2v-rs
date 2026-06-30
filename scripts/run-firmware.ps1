@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory = $true)]
-    [ValidateSet("system", "sniffer")]
+    [ValidateSet("gateway", "transceiver")]
     [string]$Project,
 
     [Parameter(Mandatory = $true)]

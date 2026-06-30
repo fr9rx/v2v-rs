@@ -2,7 +2,7 @@
 set -eu
 
 if [ "${1-}" = "" ] || [ "${2-}" = "" ]; then
-    echo "Usage: run-firmware.sh system|sniffer esp32|esp32s2|esp32s3|esp32c3|esp32c5|esp32c6"
+    echo "Usage: run-firmware.sh gateway|transceiver esp32|esp32s2|esp32s3|esp32c3|esp32c5|esp32c6"
     exit 1
 fi
 
