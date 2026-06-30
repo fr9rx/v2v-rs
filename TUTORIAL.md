@@ -211,6 +211,12 @@ Examples:
 
 1. ESP32-C5 uses `esp32c5`.
 2. ESP32-C6 uses `esp32c6`.
+3. ESP32-S3 uses `esp32s3`.
+4. ESP32 and ESP32-S2 are Xtensa boards. ESP32-C3, C5, and C6 are RISC-V boards.
+5. `esp32s3` need its own toolchain. Install it first if you use that board.
+
+You do not need to edit Cargo files for target. Use launcher script in root `scripts/` folder.
+If you want no typing, use `scripts/menu-firmware.ps1` on Windows.
 
 ## Step 7: Flash Vehicle Firmware
 
@@ -218,40 +224,33 @@ Use this firmware on boards that will act like vehicles.
 
 Plug in the vehicle ESP board.
 
-Go to the vehicle firmware folder:
+Run launcher from repo root:
+
+Windows PowerShell:
 
 ```sh
-cd v2v_system
+.\scripts\run-firmware.ps1 system esp32c5
 ```
 
-If you have one ESP board plugged in, run this. Replace `esp32c5` with your board type:
+Windows CMD:
+
+```cmd
+scripts\run-firmware.cmd system esp32c5
+```
+
+macOS or Linux:
 
 ```sh
-cargo run --release --no-default-features --features esp32c5
+./scripts/run-firmware.sh system esp32c5
 ```
 
-If more than one ESP board is plugged in, choose the port first.
+If more than one ESP board is plugged in, set port first.
 
-Windows PowerShell example:
+Windows PowerShell:
 
-```powershell
+```sh
 $env:ESPFLASH_PORT="COM3"
-cargo run --release --no-default-features --features esp32c5
-```
-
-macOS or Linux example:
-
-```sh
-export ESPFLASH_PORT="/dev/ttyACM0"
-cargo run --release --no-default-features --features esp32c5
-```
-
-When flashing finishes, unplug the vehicle board or leave it powered.
-
-Go back to the main project folder:
-
-```sh
-cd ..
+.\scripts\run-firmware.ps1 system esp32c5
 ```
 
 ## Step 8: Flash Sniffer Firmware
@@ -260,40 +259,33 @@ Use this firmware on the ESP board connected to the computer. This board listens
 
 Plug in the sniffer ESP board.
 
-Go to the sniffer firmware folder:
+Run launcher from repo root:
+
+Windows PowerShell:
 
 ```sh
-cd v2v_sniffer
+.\scripts\run-firmware.ps1 sniffer esp32c6
 ```
 
-Run this. Replace `esp32c6` with your sniffer board type:
+Windows CMD:
+
+```cmd
+scripts\run-firmware.cmd sniffer esp32c6
+```
+
+macOS or Linux:
 
 ```sh
-cargo run --release --no-default-features --features esp32c6
+./scripts/run-firmware.sh sniffer esp32c6
 ```
 
-If more than one ESP board is plugged in, choose the port first.
+If more than one ESP board is plugged in, set port first.
 
-Windows PowerShell example:
+Windows PowerShell:
 
-```powershell
+```sh
 $env:ESPFLASH_PORT="COM4"
-cargo run --release --no-default-features --features esp32c6
-```
-
-macOS or Linux example:
-
-```sh
-export ESPFLASH_PORT="/dev/ttyACM1"
-cargo run --release --no-default-features --features esp32c6
-```
-
-Leave the sniffer board plugged into the computer.
-
-Go back to the main project folder:
-
-```sh
-cd ..
+.\scripts\run-firmware.ps1 sniffer esp32c6
 ```
 
 ## Step 9: Install Traccar
