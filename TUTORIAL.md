@@ -40,9 +40,6 @@ This is a small Python program that runs on your computer. It reads the messages
 **Traccar**
 This is tracking software that runs on your computer. It receives location data and shows your vehicles moving on a live map in your web browser.
 
-> **Note**
-> Throughout this tutorial, we always use the same names: **Host Device**, **Gateway**, **Transceiver**, **Python Gateway**, and **Traccar**. We never use other words like "receiver" or "sniffer" for the same thing, so you can follow along without confusion.
-
 ---
 
 ## What You Need
