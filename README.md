@@ -28,17 +28,11 @@ Vehicle 1           Vehicle 2           Vehicle 3
 
 ---
 
-## For Non-Technical Users
-
-You do not need to understand how any of this works under the hood. If you want to get the system running, follow the step-by-step tutorial:
-
 > **→ [TUTORIAL.md](TUTORIAL.md)**
 
 The tutorial covers everything from installing the required tools to seeing your first vehicle appear on the map.
 
 ---
-
-## For Technical Users
 
 ### Stack
 
